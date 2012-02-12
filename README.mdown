@@ -1,6 +1,6 @@
-# SalesKing Sample App
+# SalesKing DATEV Exporter App
 
-A SalesKing app
+The only one DATEV Export that doesn't suck
 
 ## Developer Infos
 
