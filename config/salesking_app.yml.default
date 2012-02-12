@@ -1,0 +1,35 @@
+development:
+  #oAuth app credentials
+  id:
+  secret:
+
+  # url of the salesking instance(here on our dev cloud)
+  # *(star) is replaced with the subdomain of the user accessing your app
+  sk_url: https://*.dev.salesking.eu
+
+  # The apps canvas-slug as set by you in salesking app creation.
+  # Users find the app at SUB.salesking.eu/app/csv-importer
+  # 
+  canvas_slug: csv-importer
+
+  # acl - scope defines what the app is allowed to do.
+  scope: api/clients:create offline_access
+
+  # comming back from oauth dialog to this app
+  redirect_url: http://localhost:3001/login_success
+
+test:
+  id:
+  secret:
+  sk_url: https://*.dev.salesking.eu
+  canvas_slug: csv-importer
+  scope: api/clients:create offline_access
+  redirect_url: http://localhost:3001/login_success
+
+production:
+  id:
+  secret:
+  sk_url: https://*.dev.salesking.eu
+  canvas_slug: csv-importer
+  scope: api/clients:create offline_access
+  redirect_url: http://localhost:3001/login_success

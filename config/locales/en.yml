@@ -1,0 +1,73 @@
+en:
+  activerecord:
+    models:
+      attachment:
+        one: Uploaded File
+        other: Uploaded Files
+      import:
+        one: Import
+        other: Imports
+      mapping:
+        one: Mapping
+        other: Mappings
+      data_row:
+        one: Data Row
+        other: Data Rows
+    attributes:
+      attachment:
+        col_sep: Column Separator
+        quote_char: Quote character
+      import:
+        created_at: Created at
+        col_sep: Column Separator
+        quote_char: Quote character
+        kind: Data type
+      data_row:
+        sk_id: SalesKing ID
+        log: Log
+        source: Source data
+      mapping_element:
+        target: Target field
+        source: Source field
+        conv_type: Convert type
+        conv_opts: Convert Options
+  attachments:
+    new: Upload new CSV file
+    upload: Upload
+    proceed_to_mapping: Proceed to mapping
+    delete_confirm: "Please note that, this is irreversible process. This will delete associated imports. Are you sure?"  
+  mappings:
+    title:
+      one: "%{count} field: %{fields}"
+      other: "%{count} fields: %{fields}"
+    new: Create mapping
+    proceed_to_import: Proceed to import
+    source_fields: Source fields
+    target_fields: Target fields
+    dnd_info: "Please drag&drop fields above onto their targets below. Drop multiple fields on a target to join values (space-delimited) e.g for the tag list."
+  imports:
+    title_success:
+      one: "%{count} rows imported"
+      other: "%{count} rows imported"
+    title_failed:
+      one: "%{count} row failed"
+      other: "%{count} rows failed"
+    new: Create import
+    create: Import data
+    total:
+      one: "Total %{count} row"
+      other: "Total %{count} rows"
+  data_rows:
+    failed: Failed rows
+    success: Successfull rows
+  link:
+    actions: Actions
+    show: Show
+    edit: Edit
+    revert: Revert
+    back_to_list: Back to list
+    destroy: Delete
+    confirm_destroy: Really delete this record?
+    step: "Step %{count} from %{total}:"
+  errors:
+    sk_login_required: "Please login to SalesKing and navigate to this app from inside there."

@@ -1,0 +1,13 @@
+/*
+ *= require bootstrap.min
+*/
+
+ul.top_menu{margin:0;padding:0}
+ul.top_menu li{display:inline;float:left;border-right:1px solid #ddd;margin:0;padding:0}
+ul.top_menu li a{text-decoration:none;margin:3px 15px}
+ul.top_menu li a.current{color:#00376f}
+ul.top_menu li:first-child{border-left:none}
+ul.top_menu li:first-child a{margin-left:0}
+ul.top_menu li:last-child{border-right:none}
+hr.seperator{border-top:1px solid #ccc;background:#ccc;margin:5px 0}
+.clear{clear:both}

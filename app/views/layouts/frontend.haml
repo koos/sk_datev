@@ -1,0 +1,19 @@
+!!! Strict
+%html{ "xmlns" => "http://www.w3.org/1999/xhtml", "xml:lang" => I18n.locale, "lang" =>  I18n.locale }
+  %head
+    %title= 'SalesKing Sample App Importer'
+    = stylesheet_link_tag    "application"
+    = stylesheet_link_tag    "frontend"
+  %body
+    .topbar
+      .fill
+        .container
+          %a(class="brand" href="#")Sample App
+          %ul.nav
+            %li.active
+              %a(href="https://salesking.eu")Login to SalesKing
+
+    .container
+      = yield
+      %footer
+        %p &copy; 2012 Jan Kus - Railslove GmbH
