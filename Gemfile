@@ -6,9 +6,7 @@ gem 'json'
 gem 'sk_sdk'
 gem "sk_api_schema"
 gem "haml"
-gem 'jquery-rails'
 
-gem "thin"
 gem 'pg'
 gem 'heroku'
 
