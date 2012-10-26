@@ -1,0 +1,9 @@
+- if alert
+  .alert-message.error= alert
+.hero-unit
+  %h1 New Export
+  %p Just do this and that and ...
+
+  - @invoices.each do |invoice|
+    = invoice.number
+    = invoice.client

@@ -1,0 +1,14 @@
+- if alert
+  .alert-message.error= alert
+.hero-unit
+  %h1 New Export
+  %p Just do this and that and ...
+
+  = form_tag(new_export_url, :method => "get") do
+    = label_tag "from"
+    = text_field_tag("from", nil, :class => "datepicker")
+    %br
+    = label_tag "to"
+    = text_field_tag("to", nil, :class => "datepicker")    
+    %br
+    = submit_tag

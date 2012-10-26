@@ -16,6 +16,10 @@ class SessionsController < ApplicationController
       session['access_token'] = r.data['access_token']
       session['user_id'] = r.data['user_id']
       session['company_id'] = r.data['company_id']
+      # raise r.data.inspect
+      # TODO add user_name
+      # session['name'] = r.data['user_name']
+      User.create(:sk_access_token => session['access_token'], :sk_user_id => session['user_id'], :sk_company_id => session['sk_company_id'])
       redirect_to root_url
     else # must authorize redirect to oauth dialog
       render :inline => "<script> top.location.href='#{Sk::APP.auth_dialog}'</script>"

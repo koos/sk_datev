@@ -1,5 +1,8 @@
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui
-//= require fileuploader
+//= require jquery.ui.datepicker
 //= require_tree .
+
+$(function() {
+  $('.datepicker').datepicker();
+});

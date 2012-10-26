@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   before_filter :login_required
 
   protected
+
+    def current_user
+      User.find_by_sk_access_token(session['access_token'])
+    end
     
     def current_company_id
       session['company_id']
