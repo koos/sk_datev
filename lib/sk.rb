@@ -7,19 +7,15 @@ require 'sk_sdk/oauth'
 class Sk
   # setup oAuth app info, local classes
   @@conf = YAML.load_file(Rails.root.join('config', 'salesking_app.yml'))
-  #raise 'config/salesking_app.yml missing' if !@@conf || @@conf.empty?
+  raise 'config/salesking_app.yml missing' if !@@conf || @@conf.empty?
   APP = SK::SDK::Oauth.new(@@conf[Rails.env])
-  %w{Client Address Invoice LineItem Product}.each do |model|
+  %w{Client Address Invoice LineItem Product Export}.each do |model|
     eval "class #{model} < SK::SDK::Base;end"
   end
-  
+
   # init SalesKing classes and set connection oAuth token
   def self.init(site, token)
     SK::SDK::Base.set_connection( {:site => site, :token => token} )
   end
 
-  # read json-schema
-  def self.read_schema(kind)
-    SK::Api::Schema.read(kind, '1.0')
-  end
 end

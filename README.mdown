@@ -4,31 +4,42 @@ The only one DATEV Export that doesn't suck
 
 ## Developer Infos
 
-The app is build with Rails 3.2.1 on Ruby 1.9.3 and a mysql & postgres 
-backend. It uses oAuth2 and has a canvas integration, so a user can use 
+The app is build with Rails 3.2.1 on Ruby 1.9.3 and a mysql & postgres
+backend. It uses oAuth2 and has a canvas integration, so a user can use
 it inside SalesKing.
 
 ## Getting Started
 
 1. Register a new app to get an app-id & secret in your SalesKing account.
+Assuming the app runs at localhost:3000 set the following:
 
-    * Set a unique CANVAS SLUG so it can be reached inside salesking.eu/app/my-import 
-    * Set the Canvas URL to http://MY-URL.local/login <- /login receives the auth POST when a user opens the app in sk/app/my-import
+    * Name:
+    * URL: http://localhost:3000/
+    * CANVAS SLUG: a unique app-slug
+    * CANVAS URL: http://localhost:3000/login
+      (receives a POST when a user opens the app in salesking.eu/app/CANVAS-SLUG iframe)
 
-2. Checkout this repo, copy and edit salesking_app.yml & database.yml.
+2. Edit salesking_app.yml
+
+  * Set app ID and SECRET to the values from the registered app above
+  * Set CANVAS_SLUG to the value from above
+  * Check SK_URL pointing to our development instance by default https://*.dev.salesking.eu
+
+3. Edit database.yml
 
     bundle install
     bundle exec rake db:migrate
     bundle exec rails s
 
-3. Go into SalesKing at /app/your-canvas-slug
+4. Browse to https://YOUR-SUB-DOMAIN.dev.salesking.eu/app/CANVAS-SLUG  or click on the canvas slug inside the app-center
+
 
 ## Run on Heroku
 
-The app is deployed by us on Heroku and [you can do it too](http://devcenter.heroku.com/articles/rails31_heroku_cedar). The only problem to be 
-solved is the creation of the salesking_app.yml keeping the app 
-key & secret. 
-Instead of using [Heroku's env_vars](http://devcenter.heroku.com/articles/config-vars) you should use a separate 
+The app is deployed by us on Heroku and [you can do it too](http://devcenter.heroku.com/articles/rails31_heroku_cedar). The only problem to be
+solved is the creation of the salesking_app.yml keeping the app
+key & secret.
+Instead of using [Heroku's env_vars](http://devcenter.heroku.com/articles/config-vars) you should use a separate
 local git branch where you add the ignored salesking_app.yml file:
 
     # create a new branch

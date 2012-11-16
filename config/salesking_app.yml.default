@@ -1,35 +1,34 @@
 development:
   #oAuth app credentials
-  id:
-  secret:
+  id: 693d4ddc183b7609
+  secret: af2ce89e2ba4a1c33eb81ec0fb23e424
+
+  # The apps canvas-slug as set by you in salesking app creation.
+  # Users find the app at SUB.salesking.eu/app/sk-datev
+  canvas_slug: sk-datev
 
   # url of the salesking instance(here on our dev cloud)
   # *(star) is replaced with the subdomain of the user accessing your app
   sk_url: https://*.dev.salesking.eu
 
-  # The apps canvas-slug as set by you in salesking app creation.
-  # Users find the app at SUB.salesking.eu/app/csv-importer
-  # 
-  canvas_slug: csv-importer
-
   # acl - scope defines what the app is allowed to do.
-  scope: api/clients:create offline_access
+  scope: api/clients:read api/invoices:read api/exports offline_access
 
   # comming back from oauth dialog to this app
-  redirect_url: http://localhost:3001/login_success
+  redirect_url: http://localhost:3000/login_success
 
 test:
   id:
   secret:
   sk_url: https://*.dev.salesking.eu
-  canvas_slug: csv-importer
-  scope: api/clients:create offline_access
-  redirect_url: http://localhost:3001/login_success
+  canvas_slug: sk-datev
+  scope: api/clients:read api/invoices:read api/exports offline_access
+  redirect_url: http://localhost:3000/login_success
 
 production:
   id:
   secret:
   sk_url: https://*.dev.salesking.eu
-  canvas_slug: csv-importer
-  scope: api/clients:create offline_access
-  redirect_url: http://localhost:3001/login_success
+  canvas_slug: sk-datev
+  scope: api/clients:read api/invoices:read api/exports offline_access
+  redirect_url: http://localhost:3000/login_success
