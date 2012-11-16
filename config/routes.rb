@@ -1,4 +1,4 @@
-CsvImporter::Application.routes.draw do
+SkDatev::Application.routes.draw do
 
   resources :exports do
     collection do

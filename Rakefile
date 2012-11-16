@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-CsvImporter::Application.load_tasks
+SkDatev::Application.load_tasks
